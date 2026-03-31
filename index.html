@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="page2" href="index2.html">
+  <link rel="page3" href="weather.html">
+  <link rel="page4" href="shop.html">
+
+  <!-- Particle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+
+<!-- Particle Background -->
+<div id="particles-js"></div>
+
+<!-- Navbar -->
+<nav>
+  <h1>My Portfolio</h1>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header>
+  <h1>Abhishek AK</h1>
+  <p>Web Developer | Student</p>
+</header>
+
+<!-- About -->
+<section id="about" class="fade-in">
+  <h2>About Me</h2>
+  <p>I am a passionate developer who loves building websites.</p>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="fade-in">
+  <h2>My Skills</h2>
+
+  <div class="skill">
+    <p>HTML</p>
+    <div class="bar"><div class="progress html"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>CSS</p>
+    <div class="bar"><div class="progress css"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>JavaScript</p>
+    <div class="bar"><div class="progress js"></div></div>
+  </div>
+
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <h2 class="fade-in">Projects</h2>
+  <div class="projects">
+
+    <div class="card fade-in">
+	  <h3>
+	  <a href="index2.html" class="next-link">Smart Task Manager</a>
+	  </h3>
+      <p class="font">“Developed a Smart Task Manager with persistent storage using JavaScript localStorage, featuring dynamic task handling and responsive UI.”</p>
+    </div>
+
+    <div class="card fade-in">
+      <h3>
+	   <a href="weather.html" class="next-link">Weather Dashboard App</a>
+	  </h3>
+      <p class="font">“Built a weather dashboard using API integration to display real-time weather data with dynamic UI updates.”</p>
+    </div>
+
+    <div class="card fade-in">
+      <h3>
+	  <a href="shop.html" class="next-link">Mini E-Commerce Website (Frontend)</a>
+	  </h3>
+      <p class="font">“Designed a mini e-commerce frontend with product listing, cart functionality, and dynamic price calculation.”</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="fade-in">
+  <h2>Contact Me</h2>
+  <input type="text" placeholder="Your Name"><br>
+  <input type="email" placeholder="Your Email"><br>
+  <textarea placeholder="Your Message"></textarea><br>
+  <button>Send</button>
+</section>
+
+<footer>
+  <p>© 2026 Abhishek AK</p>
+</footer>
+
+<!-- Scroll Animation -->
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const position = el.getBoundingClientRect().top;
+    const screen = window.innerHeight;
+
+    if (position < screen - 100) {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    }
+  });
+});
+</script> 
+
+<!-- Particle Config 
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 2 },
+    line_linked: { enable: true }
+  }
+});
+</script> -->
+
+</body>
+</html>
