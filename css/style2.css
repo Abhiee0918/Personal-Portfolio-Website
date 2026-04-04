@@ -61,13 +61,13 @@ li {
   align-items: center;
 }
 
-/* Completed task */
+
 .completed {
   text-decoration: line-through;
   color: gray;
 }
 
-/* Delete button */
+
 .delete {
   background: red;
   color: white;

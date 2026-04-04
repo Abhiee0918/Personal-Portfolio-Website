@@ -40,5 +40,5 @@ function deleteTask(index) {
   renderTasks();
 }
 
-/* Load tasks on start */
+
 renderTasks();

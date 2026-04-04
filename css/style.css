@@ -1,4 +1,4 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: Arial;
 }
 
-/* Particle Background */
+
 #particles-js {
   position: fixed;
   width: 100%;
@@ -15,7 +15,7 @@
   background: #0f172a;
 }
 
-/* Navbar */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,7 @@ nav a:hover {
   color: #38bdf8;
 }
 
-/* Hero */
+
 header {
   text-align: center;
  
@@ -48,13 +48,6 @@ header {
   padding-top:40px;
 }
 
-/*.typing {
-  border-right: 3px solid #38bdf8;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-  animation: typing 3s steps(20) forwards, blink 0.7s infinite;
-}*/
 
 @keyframes typing {
   to { width: 100%; }
@@ -64,21 +57,21 @@ header {
   50% { border-color: transparent; }
 }
 
-/* Sections */
+
 section {
   padding: 60px 20px;
   text-align: center;
   color: white;
 }
 
-/* Fade-in */
+
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
   transition: 1s;
 }
 
-/* Skills */
+
 .skill {
   width: 80%;
   margin: 20px auto;
@@ -105,7 +98,7 @@ section {
   from { width: 0; }
 }
 
-/* Projects */
+
 .projects {
   display: flex;
   justify-content: center;
@@ -137,7 +130,7 @@ section {
   box-shadow: 0 10px 25px rgba(56,189,248,0.4);
 }
 
-/* Contact */
+
 input, textarea {	
   width: 80%;
   padding: 10px;
@@ -158,9 +151,32 @@ button:hover {
   box-shadow: 0 0 15px #38bdf8;
 }
 
-/* Footer */
+
 footer {
   padding: 20px;
   text-align: center;
   color: #94a3b8;
+}
+.success-box {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #22c55e;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+
+  transition: 0.4s ease;
+}
+
+
+.success-box.show {
+  opacity: 1;
+  transform: translateY(0);
 }
