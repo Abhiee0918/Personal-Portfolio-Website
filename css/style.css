@@ -257,3 +257,8 @@ footer {
   margin-bottom: 10px;
 }
 
+#about p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
