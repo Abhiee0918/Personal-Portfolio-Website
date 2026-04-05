@@ -218,8 +218,4 @@ footer {
     width: 90%;
   }
 }
-#projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
