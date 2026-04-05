@@ -1,44 +1,23 @@
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+// SUCCESS MESSAGE
+function showSuccess() {
+  let box = document.getElementById("successBox");
 
-function renderTasks() {
-  const list = document.getElementById("taskList");
-  list.innerHTML = "";
+  box.classList.add("show");
 
-  tasks.forEach((task, index) => {
-    const li = document.createElement("li");
+  setTimeout(() => {
+    box.classList.remove("show");
+  }, 3000);
+}
 
-    li.innerHTML = `
-      <span onclick="toggleTask(${index})" class="${task.done ? 'completed' : ''}">
-        ${task.text}
-      </span>
-      <button class="delete" onclick="deleteTask(${index})">X</button>
-    `;
+// SCROLL ANIMATION
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".fade-in").forEach(el => {
+    let top = el.getBoundingClientRect().top;
 
-    list.appendChild(li);
+    if (top < window.innerHeight - 100) {
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    }
   });
+});
 
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-}
-
-function addTask() {
-  const input = document.getElementById("taskInput");
-  if (input.value.trim() === "") return;
-
-  tasks.push({ text: input.value, done: false });
-  input.value = "";
-
-  renderTasks();
-}
-
-function toggleTask(index) {
-  tasks[index].done = !tasks[index].done;
-  renderTasks();
-}
-
-function deleteTask(index) {
-  tasks.splice(index, 1);
-  renderTasks();
-}
-
-
-renderTasks();

@@ -4,12 +4,9 @@
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="page2" href="index2.html">
-  <link rel="page3" href="weather.html">
-  <link rel="page4" href="shop.html">
-
  
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  
 </head>
 <body>
 
@@ -18,7 +15,7 @@
 
 
 <nav>
-  <h1>My Portfolio</h1>
+  <h4>My Portfolio</h4>
   <div>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -36,7 +33,12 @@
 
 <section id="about" class="fade-in">
   <h2>About Me</h2>
-  <p>I am a passionate developer who loves building websites.</p>
+ <p>
+I am an aspiring web developer with a strong foundation in frontend technologies including HTML, CSS, and JavaScript. I have built multiple projects such as a Task Manager, Weather App, and E-Commerce website, which demonstrate my ability to design responsive and user-friendly interfaces.
+
+I am passionate about learning new technologies, solving problems, and continuously improving my development skills. I am actively looking for internship opportunities where I can contribute and gain real-world experience.
+</p>
+
 </section>
 
 <section id="skills" class="fade-in">
@@ -63,15 +65,17 @@
 <section id="projects">
   <h2 class="fade-in">Projects</h2>
   <div class="projects">
+<div class="card fade-in">
+  <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71">
+  <h3>
+    <a href="index2.html" class="next-link">Smart Task Manager</a>
+  </h3>
+  <p class="font">Developed a Smart Task Manager with localStorage.</p>
+</div>
 
     <div class="card fade-in">
-	  <h3>
-	  <a href="index2.html" class="next-link">Smart Task Manager</a>
-	  </h3>
-      <p class="font">“Developed a Smart Task Manager with persistent storage using JavaScript localStorage, featuring dynamic task handling and responsive UI.”</p>
-    </div>
+      <img src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b">
 
-    <div class="card fade-in">
       <h3>
 	   <a href="weather.html" class="next-link">Weather Dashboard App</a>
 	  </h3>
@@ -79,6 +83,8 @@
     </div>
 
     <div class="card fade-in">
+      <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a">
+
       <h3>
 	  <a href="shop.html" class="next-link">Mini E-Commerce Website (Frontend)</a>
 	  </h3>
@@ -94,7 +100,9 @@
   <input type="text" id="name" placeholder="Your Name"><br>
   <input type="email" id="email" placeholder="Your Email"><br>
   <textarea id="message" placeholder="Your Message"></textarea><br>
-  <button onclick="submitForm()">Send</button>
+ <button onclick="showSuccess()">Send</button>
+
+
 
 <div id="successBox" class="success-box">
   ✔ Message Sent Successfully!
@@ -125,6 +133,7 @@ window.addEventListener('scroll', () => {
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<script src="script.js"></script>
 
 </body>
 <script>

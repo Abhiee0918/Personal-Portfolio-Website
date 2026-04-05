@@ -15,15 +15,19 @@
   background: #2d3853;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 nav {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background: rgba(0,0,0,0.6);
-  color: white;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 nav a {
@@ -54,26 +58,42 @@ nav a:not(:last-child)::after {
 
 header {
   text-align: center;
- 
-  background-color:#67b7df;
-  border-radius:20px;
-  padding: 30px;
-  margin: 40px;
+  padding: 100px 20px;
+  animation: fadeIn 1.5s ease;
+}
+h1{
+  color: rgb(62, 197, 246);
 }
 
-
-@keyframes typing {
-  to { width: 100%; }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a:hover {
+  transform: scale(1.1);
 }
 
-@keyframes blink {
-  50% { border-color: transparent; }
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
+
 
 
 section {
   padding: 60px 20px;
   text-align: center;
+  color: white;
+  
+}
+p{
+  font-style: italic;
   color: white;
 }
 
@@ -130,18 +150,27 @@ section {
 	font-style:italic;
 	font-size:15px;
 }
-
 .card {
-  background: #1e293b;
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(8px);
   padding: 20px;
+  margin: 15px;
   border-radius: 15px;
-  width: 250px;
-  transition: 0.3s;
+  width: 280px;
+  display: inline-block;
+  transition: 0.4s;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(56,189,248,0.4);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+h4{
+  background: linear-gradient(to right, #38bdf8, #22c55e);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 30px;
 }
 
 
@@ -218,5 +247,13 @@ footer {
   input, textarea {
     width: 90%;
   }
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
